@@ -1,82 +1,79 @@
 # 🚀 Paydos – Inventory Management System
 
-*Paydos* is a sleek, centralized platform for tracking products, user assignments, and GSM packages. Designed for efficiency, it empowers your organization to manage assets, assign devices/SIM plans, and produce quick reports—all from a single dashboard.
+Paydos is a centralized platform for efficiently tracking products, user assignments, and GSM packages. Manage assets, assign devices/SIM plans, and generate reports from a single dashboard.
 
 ---
 
-## 🔑 Key Features
+## ✨ Key Features
 
-### 👥 User Management
-- **Secure Login & Roles**  
-  • Role-based permissions (Admin ↔ User)  
-  • Protected sessions and hashed passwords  
-- **User Profiles & Assignment Overview**  
-  • View each user’s profile and their allocated assets  
-  • “Custodian” PDF report generation per user  
-
----
-
-### 📦 Inventory Management
-- **Product Categories**  
-  • Create, edit, and delete categories  
-  • Upload images for each product  
-- **Item Assignment**  
-  • Assign devices (laptops, phones, etc.) to users  
-  • Track IMEI/Serial Number, Model, Status, Notes  
-- **Exports**  
-  • Download assignment lists as Excel (.xlsx) or PDF
+* **📦 Inventory Management:**
+    * Manage product categories with image uploads.
+    * Assign devices (laptops, phones, etc.) with details like IMEI/Serial, Model, Status, and Notes.
+    * Export assignment lists to Excel (.xlsx) or PDF.
+* **📶 GSM Management:**
+    * Organize SIM plans by departments (e.g., Sales, Support).
+    * Define GSM packages (data, minutes, SMS) with an accordion view for details.
+    * Assign SIM numbers and packages to users.
+    * Export GSM assignments to Excel or PDF.
+* **📊 Interface & Reporting:**
+    * Dashboard with at-a-glance statistics and quick navigation.
+    * Interactive tables with search, filter, sort, and pagination.
+    * Visual cues (status badges, icons) and responsive design.
 
 ---
 
-### 📶 GSM Management
-- **GSM Categories / Departments**  
-  • Organize SIM plans by department (e.g., Sales, Support)  
-- **GSM Packages & Contents**  
-  • Define data, minutes, SMS allowances  
-  • Accordion-style view for package details  
-- **GSM Assignment**  
-  • Assign SIM numbers and packages to users  
-  • Export GSM assignments to Excel or PDF
+## 🛠️ Tech Stack
+
+* **Backend:** PHP 8.x, Laravel Framework
+* **Frontend:** HTML5, CSS3, JavaScript, jQuery, Bootstrap-based Admin Theme
+* **Database:** MySQL / MariaDB
 
 ---
 
-### 📊 Interface & Reporting
-- **Dashboard**  
-  • At-a-glance statistics (total assets, pending assignments)  
-  • Quick navigation to Users, Inventory, GSM modules  
-- **Interactive Tables**  
-  • Search, filter, and sort any list (Users, Products, GSM, etc.)  
-  • Pagination for large datasets  
-- **Visual Cues**  
-  • Status badges, icons, and consistent color schemes  
-  • Responsive design for desktop and mobile  
+## ⚙️ Setup & Configuration
+
+1.  **Clone the repository.**
+2.  **Install dependencies:**
+    ```bash
+    composer install
+    ```
+3.  **Create your environment file:**
+    ```bash
+    cp .env.example .env
+    ```
+4.  **Generate Application Key:** This is crucial for securing your Laravel application.
+    ```bash
+    php artisan key:generate
+    ```
+    This command will automatically add the `APP_KEY` to your `.env` file.
+
+5.  **Configure your `.env` file** with your database credentials and other settings:
+    ```dotenv
+    APP_NAME=Paydos
+    APP_ENV=local
+    APP_DEBUG=true
+    APP_URL=http://localhost
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306      # Default MySQL/MariaDB port
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_database_user
+    DB_PASSWORD=your_database_password
+    ```
+6.  **Run database migrations:**
+    ```bash
+    php artisan migrate
+    ```
+7.  **(Optional) Seed the database:**
+    ```bash
+    php artisan db:seed
+    ```
+8.  **Serve the application:**
+    ```bash
+    php artisan serve
+    ```
 
 ---
 
-## 🛠️ Technology Stack
-
-| Layer      | Technology                                                                 |
-|:----------:|:---------------------------------------------------------------------------|
-| **Backend**  | PHP 8.x · Laravel Framework                                                 |
-| **Frontend** | HTML5 · CSS3 · JavaScript · jQuery · Bootstrap-based admin theme             |
-| **Database** | MySQL (or MariaDB)                                                         |
-
----
-
-## ⚙️ Configuration
-
-Set the following environment variables in your `.env` file (or your server’s configuration) to connect to the database:
-
-```dotenv
-DB_PORT=3306        # The port on which your MySQL/MariaDB server is listening (default: 3306)
-DB_DATABASE=        # The name of the database that Paydos will use
-DB_USERNAME=        # The database user with permissions to read/write to DB_DATABASE
-DB_PASSWORD=        # The password for DB_USERNAME
-
----
-
-> **Tip:** Keep your categories and packages well-organized to quickly locate assets and SIM plans. Paydos’s dashboard and interactive tables make it easy to filter and sort data in real time.
-
----
-
-© 2023 Paydos Software  
+© 2023 Paydos Software - Developed by Mert Güneri Dudu
