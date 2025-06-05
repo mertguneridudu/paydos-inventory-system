@@ -49,7 +49,7 @@ Paydos is a centralized platform for efficiently tracking products, user assignm
 
 5.  **Configure your `.env` file** with your database credentials and other settings:
     ```dotenv
-    APP_NAME=Paydos
+    APP_NAME=Laravel
     APP_ENV=local
     APP_DEBUG=true
     APP_URL=http://localhost
